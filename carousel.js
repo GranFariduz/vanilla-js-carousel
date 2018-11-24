@@ -82,6 +82,18 @@ window.addEventListener('load', () => {
   };
 
 
+  // Adding jump to certain image functionality
+  bubbles.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      bubbles.forEach((item) => { item.style.opacity = 0.5 });
+      currentImageIndex = index;
+      bubbles[currentImageIndex].style.opacity = 1;
+      slideOffset = -window.innerWidth * currentImageIndex;
+      inner.style.left = slideOffset + 'px';
+    });
+  });
+
+
   //Setting the slider to autoplay
   setInterval(() => {
     next.click();
