@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:thin,bold,black');
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +24,7 @@
 .inner img {
   width: 100vw;
   height: 100vh;
-  filter: brightness(0.9);
+  filter: brightness(80%) blur(2.5px);
 }
 
 .prev, .next {
@@ -79,6 +81,30 @@
   opacity: 0.5;
 }
 
-.active {
-  opacity: 1;
+.item {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.item-content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  top: 44%;
+}
+
+.item-content h1 {
+  color: white;
+  font-family: Montserrat;
+  font-weight: bold;
+  text-align: center;
+}
+
+.item-content p {
+  text-align: center;
+  color: white;
+  font-family: Montserrat;
+  font-size: 20px;
 }

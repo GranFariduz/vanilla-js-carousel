@@ -83,9 +83,16 @@ window.addEventListener('load', () => {
 
 
   // Setting the slider to autoplay
-  setInterval(() => {
-    next.click();
-  }, 4000);
+  // setInterval(() => {
+  //   next.click();
+  // }, 4000);
+
+  window.addEventListener('resize', () => {
+    images.forEach((img) => {
+      
+    });
+  });
 
 
 });
+
